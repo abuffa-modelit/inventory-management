@@ -217,13 +217,13 @@ export default {
 .budget-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--text-secondary);
   white-space: nowrap;
 }
 
 .budget-slider {
   flex: 1;
-  accent-color: #3b82f6;
+  accent-color: var(--accent);
   cursor: pointer;
 }
 
@@ -232,13 +232,13 @@ export default {
   text-align: right;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .confirmation {
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  color: #065f46;
+  background: var(--success-soft);
+  border: 1px solid color-mix(in srgb, var(--success) 35%, transparent);
+  color: var(--success-text);
   padding: 1rem;
   border-radius: 8px;
   margin: 1rem 0;
@@ -247,7 +247,7 @@ export default {
 
 .confirmation-link {
   margin-left: 0.5rem;
-  color: #047857;
+  color: var(--success-text);
   font-weight: 600;
 }
 
@@ -258,27 +258,27 @@ export default {
   font-size: 0.813rem;
   font-weight: 600;
   cursor: pointer;
-  background: #3b82f6;
-  color: white;
+  background: var(--accent);
+  color: var(--text-inverse);
   transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .place-order-button:hover:not(:disabled) {
-  background: #2563eb;
+  background: var(--accent-hover);
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
 }
 
 .place-order-button:disabled {
-  background: #cbd5e1;
+  background: var(--border-strong);
   cursor: not-allowed;
 }
 
 .empty-state {
   text-align: center;
   padding: 2rem;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 0.875rem;
 }
 
@@ -289,5 +289,26 @@ export default {
 
 .numeric {
   text-align: right;
+}
+
+/* Phones: label on its own line above the slider and amount */
+@media (max-width: 767px) {
+  .budget-control {
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .budget-label {
+    flex-basis: 100%;
+    white-space: normal;
+  }
+
+  .budget-slider {
+    min-width: 0;
+  }
+
+  .budget-value {
+    min-width: 0;
+  }
 }
 </style>

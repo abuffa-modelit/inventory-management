@@ -243,13 +243,8 @@ textarea {
   text-overflow: ellipsis;
 }
 
-/* Page header: title, optional description, optional actions on the right */
+/* Page header: title with an optional one-line description beneath it */
 .page-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--space-4);
   margin-bottom: var(--space-6);
 }
 
@@ -299,13 +294,13 @@ textarea {
 }
 
 .stat-value {
-  font-size: var(--text-kpi);
+  font-size: var(--text-2xl);
   font-weight: 600;
   line-height: 1.15;
   color: var(--text);
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .stat-card.warning .stat-value {
