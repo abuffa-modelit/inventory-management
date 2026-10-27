@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: redesign-inventory-app-sidebar
+expected_outcome: |
+  The top navigation bar is replaced by a left sidebar holding every existing route; the app builds without errors; shared styles use CSS design tokens; every route still renders its data; screenshots of the result were taken and inspected.
