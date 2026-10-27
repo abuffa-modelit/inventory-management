@@ -6,8 +6,16 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
-    subtitle: 'Inventory Management System'
+    subtitle: 'Inventory Management System',
+    reports: 'Reports',
+    main: 'Main navigation',
+    groupOperations: 'Operations',
+    groupAnalytics: 'Analytics',
+    collapseSidebar: 'Collapse or expand sidebar',
+    openNavigation: 'Open navigation',
+    toggleTheme: 'Toggle dark mode'
   },
 
   // Dashboard
@@ -112,6 +120,22 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submittedOrders: {
+      title: 'Submitted Orders',
+      empty: 'No restock orders have been submitted yet.',
+      goToRestocking: 'Plan an order on the Restocking tab',
+      loadError: 'Failed to load submitted orders',
+      leadTimeDays: '{days} days',
+      table: {
+        orderNumber: 'Order #',
+        items: 'Items',
+        submittedDate: 'Submitted',
+        leadTime: 'Lead Time',
+        expectedDelivery: 'Expected Delivery',
+        totalValue: 'Total Value',
+        status: 'Status'
+      }
+    },
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -188,6 +212,34 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Turn demand forecasts into a purchase order that fits your budget',
+    budget: 'Budget',
+    budgetLabel: 'Restocking budget',
+    recommendedTotal: 'Recommended Total',
+    remaining: 'Remaining',
+    items: 'Items',
+    recommendations: 'Recommendations',
+    noItems: 'No items fit within this budget. Increase the budget to see recommendations.',
+    placeOrder: 'Place Order',
+    submitting: 'Submitting...',
+    orderPlaced: 'Order {orderNumber} submitted.',
+    viewOrders: 'View in Orders',
+    loadError: 'Failed to load recommendations',
+    submitError: 'Failed to place order',
+    table: {
+      sku: 'SKU',
+      name: 'Name',
+      trend: 'Trend',
+      quantity: 'Quantity',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time (Days)'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: 'Time Period',
@@ -204,6 +256,7 @@ export default {
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'

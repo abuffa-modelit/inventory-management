@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: mobile-nav-doesnt-fit
+expected_outcome: |
+  Navigation lives in a sidebar that becomes an off-canvas drawer below 768px with a menu button, the page has no horizontal scroll at 375px width, spacing uses a consistent token scale, and the build passes.

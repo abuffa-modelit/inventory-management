@@ -6,8 +6,16 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
     companyName: '触媒コンポーネンツ',
-    subtitle: '在庫管理システム'
+    subtitle: '在庫管理システム',
+    reports: 'レポート',
+    main: 'メインナビゲーション',
+    groupOperations: 'オペレーション',
+    groupAnalytics: '分析',
+    collapseSidebar: 'サイドバーの折りたたみ・展開',
+    openNavigation: 'ナビゲーションを開く',
+    toggleTheme: 'ダークモードの切り替え'
   },
 
   // Dashboard
@@ -112,6 +120,22 @@ export default {
     onTimeDelivery: '定時配達',
     itemsCount: '{count}件',
     quantity: '数量',
+    submittedOrders: {
+      title: '発注済みの補充注文',
+      empty: '補充注文はまだ発注されていません。',
+      goToRestocking: '補充発注タブで注文を作成する',
+      loadError: '発注済みの注文の読み込みに失敗しました',
+      leadTimeDays: '{days}日',
+      table: {
+        orderNumber: '注文番号',
+        items: '品目',
+        submittedDate: '発注日',
+        leadTime: 'リードタイム',
+        expectedDelivery: '納品予定日',
+        totalValue: '合計金額',
+        status: 'ステータス'
+      }
+    },
     table: {
       orderNumber: '注文番号',
       orderId: '注文ID',
@@ -188,6 +212,34 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: '補充発注',
+    description: '需要予測をもとに、予算内に収まる発注を作成します',
+    budget: '予算',
+    budgetLabel: '補充予算',
+    recommendedTotal: '推奨合計',
+    remaining: '残額',
+    items: '品目数',
+    recommendations: '推奨品目',
+    noItems: 'この予算内に収まる品目はありません。予算を増やすと推奨品目が表示されます。',
+    placeOrder: '発注する',
+    submitting: '送信中...',
+    orderPlaced: '注文 {orderNumber} を発注しました。',
+    viewOrders: '注文画面で確認',
+    loadError: '推奨品目の読み込みに失敗しました',
+    submitError: '発注に失敗しました',
+    table: {
+      sku: 'SKU',
+      name: '品目名',
+      trend: 'トレンド',
+      quantity: '数量',
+      unitCost: '単価',
+      lineTotal: '小計',
+      leadTime: 'リードタイム（日）'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: '期間',
@@ -204,6 +256,7 @@ export default {
     shipped: '出荷済み',
     processing: '処理中',
     backordered: 'バックオーダー',
+    submitted: '発注済み',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
     adequate: '適量'
